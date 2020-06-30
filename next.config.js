@@ -1,13 +1,13 @@
-require("dotenv").config()
-const NetlifyAPI = require("netlify")
-const client = new NetlifyAPI(process.env.NETLIFY_TOKEN)
+require("dotenv").config();
+const NetlifyAPI = require("netlify");
+const client = new NetlifyAPI(process.env.NETLIFY_TOKEN);
 
 module.exports = {
   env: {
     NETLIFY_TOKEN: process.env.NETLIFY_TOKEN,
   },
   exportPathMap: async function () {
-    const paths = {
+    /* const paths = {
       "/": { page: "/" },
       "/about": { page: "/about" },
       "/add-blog-post": { page: "/add-blog-post" },
@@ -28,6 +28,6 @@ module.exports = {
       })
     }
     makePaths()
-    return paths
+    return paths */
   },
-}
+};
